@@ -7,14 +7,14 @@ _ft_memchr:
 	mov		rcx,		rdx
 	cld
 	repne	scasb
-	je		.not_found
+	je		.found
 	mov		rax,		0
 	leave
 	ret
 
-.not_found:
+.found:
 	mov		rax,		0
 	dec		rdi
-	mov		rax,			rdi
+	mov		rax,		rdi
 	leave
 	ret

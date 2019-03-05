@@ -17,9 +17,9 @@ _ft_puts:
 	jz		.put_nstr
 	cmp		byte[rdi],	0
 	je		.put_endl
-	mov		r11,		rdi
+	push	rdi
 	call	_ft_strlen
-	mov		rdi,		r11
+	pop		rdi
 	mov		rsi,		rdi
 	mov		rdi,		STDOUT
 	mov		rdx,		rax

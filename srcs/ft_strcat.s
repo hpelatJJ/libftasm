@@ -3,22 +3,23 @@ section	.text
 
 _ft_strcat:
 	enter	0,			0
+	mov		rdx,		rdi
+	mov		rcx,		rsi
 	
 .loop:
-	cmp		byte[rdi],	0
+	cmp		byte[rdx],		0
 	je		.concat
-	inc		rdi
-	loop	.loop
+	inc		rdx
+	jmp	.loop
 
 .concat:
-	mov		r11b,		byte[rsi]
-	mov		byte[rdi],	r11b
-	cmp		byte[rsi],	0
-	je		.ntd
-	inc		rdi
-	inc		rsi
-	loop	.concat
-
-.ntd:
+	mov		r11b,		byte[rcx]
+	mov		byte[rdx],	r11b
+	inc		rdx
+	inc		rcx
+	cmp		byte[rcx],	0
+	jne		.concat
+	mov		byte[rdx],	0
+	mov		rax,	rdi
 	leave
 	ret

@@ -12,7 +12,7 @@
 
 .PHONY: all clean fclean name re
 
-NAME = libasm.a
+NAME = libfts.a
 
 SPATH = srcs/
 
@@ -46,15 +46,14 @@ S_P = $(addprefix $(SPATH), $(SRCS))
 
 O_P = $(addprefix $(OPATH), $(OBJS))
 
-all: DIR $(NAME)
+all: $(NAME)
 
 DIR:
-	mkdir -p $(OPATH)
+	@mkdir -p $(OPATH)
 
-$(NAME): $(O_P)
+$(NAME): DIR $(O_P)
 	ar rc $(NAME) $(O_P)
 	ranlib $(NAME)
-	gcc -Wall -Wextra -Werror test/main.c $(NAME)
 
 $(OPATH)%.o: $(SPATH)%.s
 	nasm -f macho64 $< -o $@

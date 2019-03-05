@@ -4,6 +4,8 @@ section	.text
 
 _ft_strcmp:
 	enter	0,			0
+	push	r13
+	push	r12
 	push	rdi
 	call	_ft_strlen
 	mov		r13,		rax
@@ -26,5 +28,7 @@ _ft_strcmp:
 	mov		al,			byte[rdi]
 	mov		r12b,		byte[rsi]
 	sub		rax,		r12
+	pop		r12
+	pop		r13
 	leave
 	ret

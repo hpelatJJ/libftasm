@@ -1,0 +1,25 @@
+section .text
+	global _ft_strcat
+
+_ft_strcat:
+	enter    0,            0
+	mov        rcx,        rdi
+	mov        rdx,        rsi
+
+.loop_s1:
+	cmp        byte[rcx],    0
+	jz        .cpy_s2
+	inc        rcx
+	jmp        .loop_s1
+
+.cpy_s2:
+	mov        r11b,        byte[rdx]
+	mov        byte[rcx],    r11b
+	inc        rdx
+	inc        rcx
+	cmp        byte[rdx],    0
+	jnz        .cpy_s2
+	mov        byte[rcx],    0
+	mov        rax,        rdi
+	leave
+	ret

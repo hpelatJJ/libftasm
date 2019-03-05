@@ -4,13 +4,14 @@ section .text
 _ft_islower:
 	enter	0,		0
 	cmp		rdi,	'a'
-	jl		.not_alpha
+	jl		.not_lower
 	cmp		rdi,	'z'
+	jg		.not_lower
 	mov		rax,	1
 	leave
 	ret
 
-.not_alpha:
+.not_lower:
 	mov		rax,	0
 	leave
 	ret

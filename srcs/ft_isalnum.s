@@ -6,16 +6,14 @@ section .text
 _ft_isalnum:
 	enter	0,		0
 	call	_ft_isalpha
-	cmp		rax,	0
-	je		.not_alnum
+	cmp		rax,	1
+	je		.alnum
 	call	_ft_isdigit
-	cmp		rax,	0
-	je		.not_alnum
-	mov		rax,	1
+	cmp		rax,	1
+	je		.alnum
 	leave
 	ret
 
-.not_alnum:
-	mov		rax,	0
+.alnum:
 	leave
 	ret

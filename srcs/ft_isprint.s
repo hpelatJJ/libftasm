@@ -4,9 +4,9 @@ section .text
 _ft_isprint:
 	enter	0,		0
 	cmp		rdi, 	31
-	jl		.not_print
+	jle		.not_print
 	cmp		rdi, 	127
-	jg		.not_print
+	jge		.not_print
 	mov		rax,	1
 	leave
 	ret
