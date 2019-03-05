@@ -1,0 +1,34 @@
+REGISTRES DE TRAVAUX
+
+	rax (accumulator register):
+		opérations arithmétiques / stockage de la valeur de retour des appels systèmes.
+
+	rbx (data register):
+		opérations arithmétiques / opérations d'entrée - sortie
+
+	rcx (counter register):
+
+	rdx (base register):
+		pointeur de données
+
+
+REGISTRES D'OFFSET
+
+	rbp (extended base pointer):
+		pointeur de base
+
+	rsp (extended stack pointer):
+		pointeur de pile
+
+	rsi (extended source index):
+		pointeur source
+
+	rdi (extended destination index):
+		pointeur destination
+
+
+
+
+
+	rip (?):
+		adresse de l'instruction courante
