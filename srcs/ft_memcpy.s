@@ -3,6 +3,7 @@ section	.text
 
 _ft_memcpy:
 	enter	0,			0
+	mov		rax,		rdi
 	mov		rcx,		rdx
 	cld
 	rep		movsb

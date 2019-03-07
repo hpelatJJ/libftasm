@@ -48,14 +48,12 @@ O_P = $(addprefix $(OPATH), $(OBJS))
 
 all: $(NAME)
 
-DIR:
-	@mkdir -p $(OPATH)
-
-$(NAME): DIR $(O_P)
+$(NAME): $(O_P)
 	ar rc $(NAME) $(O_P)
 	ranlib $(NAME)
 
 $(OPATH)%.o: $(SPATH)%.s
+	@mkdir -p $(OPATH)
 	nasm -f macho64 $< -o $@
 
 clean:

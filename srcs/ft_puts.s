@@ -32,6 +32,7 @@ _ft_puts:
 	mov		rdx,		1
 	mov		rax,		MACH_SYSCALL(WRITE)
 	syscall
+	mov		rax,		10
 	leave
 	ret
 
@@ -41,5 +42,6 @@ _ft_puts:
 	mov		rdx,		nstr.len
 	mov		rax,		MACH_SYSCALL(WRITE)
 	syscall
+	mov		rax,		10
 	leave
 	ret

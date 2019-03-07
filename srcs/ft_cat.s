@@ -4,20 +4,18 @@
 %define STDOUT				1
 %define B_SIZE				4096
 
-section	.bss
-	buffer: resb		B_SIZE
 
 section	.text
 	global	_ft_cat
 
 _ft_cat:
-	enter	0,			0
+	enter	B_SIZE,			0
 	push	r12
 	mov		r12,		rdi
 
 .read:
 	mov		rdi,		r12
-	mov		rsi,		buffer
+	mov		rsi,		rsp
 	mov		rdx,		B_SIZE
 	mov		rax,		MACH_SYSCALL(READ)
 	syscall
@@ -25,7 +23,7 @@ _ft_cat:
 	test	rax,		rax
 	jle		.ntd
 	mov		rdi,		STDOUT
-	mov		rsi,		buffer
+	mov		rsi,		rsp
 	mov		rdx,		rax
 	mov		rax,		MACH_SYSCALL(WRITE)
 	syscall

@@ -18,10 +18,11 @@ _ft_strdup:
 	pop		rdx
 	pop		rsi
 	call	_ft_memcpy
+	mov		byte[rdi],	0
 	leave
 	ret
 
 .malloc_failed:
-	mov		rax,		rax
+	mov		rax,		0
 	leave
 	ret
