@@ -6,7 +6,7 @@
 /*   By: hpelat <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/01 16:53:15 by hpelat            #+#    #+#             */
-/*   Updated: 2019/03/01 16:59:10 by hpelat           ###   ########.fr       */
+/*   Updated: 2019/03/07 14:58:15 by hpelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		main(void)
 {
-	printf(YELLOW " === FT_BZERO ===\n%s", INIT);
+	printf(YELLOW "\n === FT_BZERO ===\n%s", INIT);
 	void	*s1 = strdup("abcdef");
 	void	*s2 = strdup("abcdef");
 
@@ -28,9 +28,9 @@ int		main(void)
 /* ************************************************************************** */
 
 	printf(YELLOW " === FT_CAT ===\n%s", INIT);
+
 	int		fd = open("Makefile", O_RDONLY);
 
-	printf("\n=== ft_cat: ===\n\n");
 	ft_cat(fd);
 	close(fd);
 
