@@ -6,7 +6,7 @@
 /*   By: hpelat <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/01 16:53:15 by hpelat            #+#    #+#             */
-/*   Updated: 2019/03/07 14:58:15 by hpelat           ###   ########.fr       */
+/*   Updated: 2019/03/08 18:11:41 by hpelat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		main(void)
 {
-	printf(YELLOW "\n === FT_BZERO ===\n%s", INIT);
+	printf(YELLOW "\n === FT_BZERO ===%s\n", INIT);
 	void	*s1 = strdup("abcdef");
 	void	*s2 = strdup("abcdef");
 
@@ -27,7 +27,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW " === FT_CAT ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_CAT ===%s\n", INIT);
 
 	int		fd = open("Makefile", O_RDONLY);
 
@@ -36,7 +36,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_ISALNUM ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_ISALNUM ===%s\n", INIT);
 
 	printf("ft_isalnum(4): %d\n", ft_isalnum(4));
 	printf("___isalnum(4): %d\n\n", isalnum(4));
@@ -49,7 +49,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_ISALPHA ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_ISALPHA ===%s\n", INIT);
 
 	printf("ft_isalpha('H'): %d\n", ft_isalpha('H'));
 	printf("___isalpha('H'): %d\n\n", isalpha('H'));
@@ -62,7 +62,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_ISASCII ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_ISASCII ===%s\n", INIT);
 	
 	printf("ft_isascii('H'): %d\n", ft_isascii('H'));
 	printf("___isascii('H'): %d\n\n", isascii('H'));
@@ -78,7 +78,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_ISDIGIT ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_ISDIGIT ===%s\n", INIT);
 
 	printf("ft_isdigit('4'): %d\n", ft_isdigit('4'));
 	printf("___isdigit('4'): %d\n\n", isdigit('4'));
@@ -91,7 +91,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(PURPLE "\n\n === FT_ISLOWER ===\n%s", INIT);
+	printf(PURPLE "\n\n === FT_ISLOWER ===%s\n", INIT);
 
 	printf("ft_islower('h'): %d\n", ft_islower('h'));
 	printf("___islower('h'): %d\n\n", islower('h'));
@@ -104,7 +104,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_ISPRINT ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_ISPRINT ===%s\n", INIT);
 
 	printf("ft_isprint('H'): %d\n", ft_isprint('H'));
 	printf("___isprint('H'): %d\n\n", isprint('H'));
@@ -120,7 +120,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(PURPLE "\n\n === FT_ISUPPER ===\n%s", INIT);
+	printf(PURPLE "\n\n === FT_ISUPPER ===%s\n", INIT);
 
 	printf("ft_isupper('H'): %d\n", ft_isupper('H'));
 	printf("___isupper('H'): %d\n\n", isupper('H'));
@@ -133,7 +133,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(PURPLE "\n\n === FT_MEMCHR ===\n%s", INIT);
+	printf(PURPLE "\n\n === FT_MEMCHR ===%s\n", INIT);
 
 	printf("ft_memchr %p\n", ft_memchr("abcdef", 'd', 6));
 	printf("___memchr %p\n\n", memchr("abcdef", 'd', 6));
@@ -146,7 +146,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_MEMCPY ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_MEMCPY ===%s\n", INIT);
 
 	char	*s3 = strdup("abcdef");
 	char	*s4 = strdup("abcdef");
@@ -169,7 +169,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_MEMSET ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_MEMSET ===%s\n", INIT);
 
 	printf("ft_memset(%s, 'H', 6): ", s3);
 	fflush(0);
@@ -194,7 +194,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_PUTS ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_PUTS ===%s\n", INIT);
 
 	printf("ft_puts(%s): ", s1);
 	fflush(0);
@@ -222,7 +222,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_STRCAT ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_STRCAT ===%s\n", INIT);
 
 	char	*s7 = strdup("abcdefghijklmnopqrstuvwxyz");
 	char	*s8 = strdup("abcdefghijklmnopqrstuvwxyz");
@@ -239,7 +239,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(PURPLE "\n\n === FT_STRCMP ===\n%s", INIT);
+	printf(PURPLE "\n\n === FT_STRCMP ===%s\n", INIT);
 
 	char	*s9 = "Hello World";
 	char	*s10 = "Hello World dlroW ollEH";
@@ -261,7 +261,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_STRDUP ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_STRDUP ===%s\n", INIT);
 
 	printf("ft_strdup(%s): %s\n", s7, ft_strdup(s7));
 	printf("___strdup(%s): %s\n\n", s7, strdup(s7));
@@ -274,7 +274,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_STRLEN ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_STRLEN ===%s\n", INIT);
 
 	printf("ft_strlen(%s): %zu\n", s7, ft_strlen(s7));
 	printf("___strlen(%s): %zu\n\n", s7, strlen(s7));
@@ -287,7 +287,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(PURPLE "\n\n === FT_STRCMP ===\n%s", INIT);
+	printf(PURPLE "\n\n === FT_STRCMP ===%s\n", INIT);
 
 	printf("ft_strncmp(%s, %s, %d): %d\n", s9, s10, 55, ft_strncmp(s9, s10, 55));
 	printf("___strncmp(%s, %s, %d): %d\n", s9, s10, 55, strncmp(s9, s10, 55));
@@ -297,7 +297,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_TOLOWER ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_TOLOWER ===%s\n", INIT);
 
 	printf("ft_tolower(%c): %c\n", 'H', (char)ft_tolower('H'));
 	printf("___tolower(%c): %c\n\n", 'H', (char)tolower('H'));
@@ -310,7 +310,7 @@ int		main(void)
 
 /* ************************************************************************** */
 
-	printf(YELLOW "\n\n === FT_TOUPPER ===\n%s", INIT);
+	printf(YELLOW "\n\n === FT_TOUPPER ===%s\n", INIT);
 
 	printf("ft_toupper(%c): %c\n", 'h', (char)ft_toupper('h'));
 	printf("___toupper(%c): %c\n\n", 'h', (char)toupper('h'));

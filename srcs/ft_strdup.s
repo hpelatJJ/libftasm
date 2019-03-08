@@ -8,6 +8,7 @@ _ft_strdup:
 	enter	0,			0
 	push	rdi
 	call	_ft_strlen
+	inc		rax
 	mov		rdx,		rax
 	push	rdx
 	mov		rdi,		rax
