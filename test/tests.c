@@ -196,12 +196,15 @@ int		main(void)
 
 	printf(YELLOW "\n\n === FT_PUTS ===%s\n", INIT);
 
-	printf("ft_puts(%s): ", s1);
+	char	*s7 = strdup("abcdefghijklmnopqrstuvwxyz");
+	char	*s8 = strdup("abcdefghijklmnopqrstuvwxyz");
+
+	printf("ft_puts(%s): ", s7);
 	fflush(0);
-	ft_puts(s1);
-	printf("___puts(%s): ", s2);
+	ft_puts(s7);
+	printf("___puts(%s): ", s8);
 	fflush(0);
-	puts(s2);
+	puts(s8);
 	printf("\n");
 
 	printf("ft_puts(\"\"): ");
@@ -223,9 +226,6 @@ int		main(void)
 /* ************************************************************************** */
 
 	printf(YELLOW "\n\n === FT_STRCAT ===%s\n", INIT);
-
-	char	*s7 = strdup("abcdefghijklmnopqrstuvwxyz");
-	char	*s8 = strdup("abcdefghijklmnopqrstuvwxyz");
 
 	s7[9] = 0;
 	s8[9] = 0;

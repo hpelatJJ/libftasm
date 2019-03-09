@@ -2,8 +2,8 @@ section	.text
 	global	_ft_strlen
 
 _ft_strlen:
-	enter	0,			0
-	push	r12
+	enter	16,			0
+	mov		[rsp],		r12
 	mov		r12,		rdi
 	mov		rax,		0
 	mov		rcx,		-1
@@ -12,6 +12,6 @@ _ft_strlen:
 	dec		rdi
 	sub		rdi,		r12
 	mov		rax,		rdi
-	pop		r12
+	mov		r12,		[rsp]
 	leave
 	ret

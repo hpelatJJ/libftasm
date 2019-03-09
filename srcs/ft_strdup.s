@@ -5,19 +5,19 @@ section	.text
 	extern	_malloc
 
 _ft_strdup:
-	enter	0,			0
-	push	rdi
+	enter	16,			0
+	mov		[rsp],		rdi
 	call	_ft_strlen
 	inc		rax
 	mov		rdx,		rax
-	push	rdx
+	mov		[rsp + 8],	rdx
 	mov		rdi,		rax
 	call	_malloc
 	test	rax,		rax
 	je		.malloc_failed
 	mov		rdi,		rax
-	pop		rdx
-	pop		rsi
+	mov		rdx,		[rsp + 8]
+	mov		rsi,		[rsp]
 	call	_ft_memcpy
 	mov		byte[rdi],	0
 	leave
