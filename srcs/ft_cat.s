@@ -2,7 +2,7 @@
 %define WRITE				4
 %define READ				3
 %define STDOUT				1
-%define B_SIZE				4096
+%define B_SIZE				1024
 
 section .bss
 	buffer: resb		B_SIZE
